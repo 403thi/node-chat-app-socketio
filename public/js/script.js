@@ -23,7 +23,7 @@ form.addEventListener('submit', (event)=>{ // quando enviar o form
         message: input.value,
         username: username.value
     }) // emite ao socket a mensagem
-    createMessageElement(`You: ${input.value}`, true)
+    createMessageElement(`${input.value}`, true)
     input.value = '' // reseta o valor do input
 })
 

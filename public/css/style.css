@@ -1,8 +1,11 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0a0c0e;
+    color: white;
 }
 #messages-container {
-    border: 1px solid black;
+    background-color: #202326;
+    border: 3px solid #7827E6;
     border-radius: 20px;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -10,6 +13,7 @@ body {
     margin-right: auto;
     height: 80%;
     width: 50%;
+    
 }
 
 /* flex container */
@@ -21,30 +25,33 @@ body {
 }
 
 .message {
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     margin-left: 2%;
     flex-direction: row;
+    word-break: break-all;
+    max-width: 99%;
 }
 .message > li {
-    background-color: rgb(240, 240, 240);
-    border: 1px solid gray;
+    background-color: #AB4FF4;
+    border: 2px solid #7827E6;
     border-radius: 20px;
     padding: 10px;
     width: max-content;
 }
 .user-message {
-    
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     margin-right: 2%;
     flex-direction: row-reverse; 
-    padding-right: 10px;
+    word-break: break-all;
+    max-width: 99%;
 }
 
 .user-message > li {
-    background-color: rgb(220, 220, 220) ;
-    border: 1px solid gray;
+    
+    background-color: #8D3AEC;
+    border: 2px solid #7827E6;
     border-radius: 20px;
     padding: 10px;
     width: max-content;
@@ -52,6 +59,8 @@ body {
 
 /* Inputs */
 #username {
+    color: white;
+    background-color: #AB4FF4;
     border-radius: 20px;
     border-style: solid;
     font-size: 100%;
@@ -72,10 +81,15 @@ body {
     display:flex;
 }
 #input-message {
+    background-color: #AB4FF4;
+    border-color: none;
     border-radius: 20px;
     border-style: solid;
     padding: 6px;
     width: 90%;
+}
+#input-message::placeholder {
+    color: rgba(255, 255, 255, 0.651);
 }
 button {
     border: none;
@@ -85,7 +99,7 @@ button {
 }
 
 button:hover {
-    outline: orange 5px auto;
+    outline: rgb(105, 35, 146) 5px auto;
 }
 
 /* Users Online Status */
