@@ -3,6 +3,7 @@ var socket = io()
 var form = document.getElementById("form")
 var input = document.getElementById("input-message")
 var username = document.getElementById("username")
+var msgsContainer = document.getElementById("messages-container")
 var msgsList = document.querySelector(".messages")
 var usersOn = document.querySelector(".users-on-count")
 
@@ -13,7 +14,7 @@ function createMessageElement(msg, from_user=false) {
     div.appendChild(item)
     div.className = "messages "+ (from_user === true ? "user-message" : "message")
     msgsList.appendChild(div)
-    window.scrollTo(0, msgsList.scrollHeight)
+    msgsContainer.scrollTo(0, msgsContainer.scrollHeight)
 }
 
 form.addEventListener('submit', (event)=>{ // quando enviar o form

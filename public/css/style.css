@@ -2,18 +2,29 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #0a0c0e;
     color: white;
+    overflow: hidden;
 }
 #messages-container {
     background-color: #202326;
     border: 3px solid #7827E6;
     border-radius: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
     height: 80%;
     width: 50%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    position: absolute;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
     
+}
+
+#messafes-container::-webkit-scrollbar {
+    display: none;
 }
 
 /* flex container */
@@ -87,6 +98,7 @@ body {
     border-style: solid;
     padding: 6px;
     width: 90%;
+    color: #FFF;
 }
 #input-message::placeholder {
     color: rgba(255, 255, 255, 0.651);
